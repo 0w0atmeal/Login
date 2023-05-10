@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!--Import materialize.css-->
-   
+  <html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <!-- NAV REPLACE -->
+        <nav th:replace="nav.html"></nav>
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-
-  <body>
-    <!-- NAV REPLACE (wozu?)-->
-    <nav th:replace="nav.html"></nav> 
-
-  </div>
-  <div class="section">
-    <h5>Registrieren</h5>
-        </div>
-        <div class="divider"></div>
-        <form th:action="@{/register}" method="post">
+        <div class="container">
             <div class="section">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input placeholder="username..." id="username" name="username" type="text" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input placeholder="enter a pin" id="key" name="key" type="number" min="1000" max="9999" required>
-                    </div>
-                </div>
+                <a class="btn-floating btn-large waves-effect waves-light lighten-2 right" th:href="@{/user/add}"><i class="material-icons">add</i></a>
+                <h4>Manage Users</h4>
             </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action">registrieren
-              <i class="material-icons right">send</i>
-          </button>
-        </form>
-  </div>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+            <div class="divider"></div>
+            <div class="section">
+                <table>
+                    <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th></th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr th:each="user: ${users}">
+                        <td th:text="${user.getUserName()}"></td>
+                        <td>
+                            <a class="waves-effect waves-light btn" th:href="@{/user/del(id=${user.getId()})}"><i class="material-icons">delete</i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+  </html>
