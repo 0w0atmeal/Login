@@ -29,25 +29,23 @@ public class IndexController {
  * - Controller erstellen: 
  * - für Database - d
  * - für Index - d
- * - für Formvalidierung
+ * - für Login - d
+ * - für Register - d
  * 
- * - verstehen wie ungefähr SQL funktioniert
  * - Datenbank erstellen - d
- * - Daten hinzufügen und löschen können - ü!
+ * - Daten hinzufügen und löschen können - d
  * 
- * - materialize runterladen und im projekt integrieren 
- * - erstmal basic view umsetzen
- * - Datenbank in der View (hinzufügen und löschen)
+ * - materialize runterladen und im projekt integrieren - d
+ * - erstmal basic view umsetzen - d
+ * - Datenbank in der View (hinzufügen und löschen) 
  * 
- * - Verstehen wie Formularvalidierung funktioniert
  * 
  * - Registrierung:
- * - Formularvalidierung mit benutzername, passwort, email, geburtstag, agbs
- * - Überprüfung, ob benutzername schon existiert
+ * - Formularvalidierung mit benutzername, passwort/pin, email - ü
  * 
  * - Login:
- * - Formularvalidierung mit benutzername, passwort
- * - Irgendein Inhalt auf der persönlichen seite (bio o.ä.)
+ * - Formularvalidierung mit benutzername, passwort/pin - ü
+ * - Wiedergabe des Benutzernamens auf der persönlichen Seite (möglich?)
  * 
  * 
  */

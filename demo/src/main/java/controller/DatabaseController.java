@@ -15,6 +15,8 @@ import model.User;
 
 
 public class DatabaseController {
+
+	ArrayList<User> users = new ArrayList<User>();
     
     public void createTable() throws SQLException{
 		Connection connection = connect();
@@ -56,7 +58,7 @@ public class DatabaseController {
 	}
 
     /**
-	 * 	USER FUNCTIONS:
+	 * 	User Funktionen:
      * 
 	 *  addUser
 	 *  removeUser
