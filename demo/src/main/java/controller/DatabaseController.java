@@ -11,6 +11,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.springframework.stereotype.Controller;
+
 import model.User;
 
 

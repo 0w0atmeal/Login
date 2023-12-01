@@ -13,14 +13,15 @@ import model.User;
 @Controller
 public class IndexController {
     
-    @GetMapping("/") public String index(@RequestParam(name="error", required = false, defaultValue = "false") boolean error, Model model) throws SQLException{
+    @GetMapping("/") 
+    public String index(@RequestParam(name="error", required = false, defaultValue = "false") boolean error, Model model) throws SQLException{
         DatabaseController db = new DatabaseController();
         db.createTable();
         ArrayList<User> users = db.getAllUsers();
         model.addAttribute("users", users);
         model.addAttribute("error", error);
         return "index.html";
-    }
+    }   
 }
 
 /*
